@@ -1,7 +1,14 @@
+using Leet_Translator.Services;
+using Leet_Translator.Services.Interfaces;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+
+//register services and interfaces
+builder.Services.AddScoped<IFunTranslationService, FunTranslationService>();
+builder.Services.AddScoped<ITranslationService, TranslationService>();
 
 var app = builder.Build();
 

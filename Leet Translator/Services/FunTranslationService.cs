@@ -19,6 +19,8 @@ namespace Leet_Translator.Services
         {
             try
             {
+                Log.Information("Translation request initiated for input text: {InputText}", inputText);
+
                 string endpoint = $"{BaseUrl}leet.json";
                 var requestBody = new FormUrlEncodedContent(new[]
                 {
@@ -31,12 +33,17 @@ namespace Leet_Translator.Services
                 {
                     var responseContent = await response.Content.ReadAsStringAsync();
                     var translationResponse = JsonConvert.DeserializeObject<FunTranslationResponse>(responseContent);
-                    
+
+                    Log.Information("Translation successful. Translated text: {TranslatedText}", translationResponse.Contents.Translated);
+
                     return translationResponse.Contents.Translated;
                 }
                 else
                 {
                     var errorContent = await response.Content.ReadAsStringAsync();
+
+                    Log.Error("Failed to translate. Error: {ErrorContent}", errorContent);
+
                     throw new Exception($"Failed to translate: {errorContent}");
                 }
             }

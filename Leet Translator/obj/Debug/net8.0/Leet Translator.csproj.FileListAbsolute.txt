@@ -1,0 +1,74 @@
+C:\Users\Yakubu\source\repos\Leet Translator\Leet Translator\bin\Debug\net8.0\appsettings.Development.json
+C:\Users\Yakubu\source\repos\Leet Translator\Leet Translator\bin\Debug\net8.0\appsettings.json
+C:\Users\Yakubu\source\repos\Leet Translator\Leet Translator\bin\Debug\net8.0\Leet Translator.staticwebassets.runtime.json
+C:\Users\Yakubu\source\repos\Leet Translator\Leet Translator\bin\Debug\net8.0\Leet Translator.exe
+C:\Users\Yakubu\source\repos\Leet Translator\Leet Translator\bin\Debug\net8.0\Leet Translator.deps.json
+C:\Users\Yakubu\source\repos\Leet Translator\Leet Translator\bin\Debug\net8.0\Leet Translator.runtimeconfig.json
+C:\Users\Yakubu\source\repos\Leet Translator\Leet Translator\bin\Debug\net8.0\Leet Translator.dll
+C:\Users\Yakubu\source\repos\Leet Translator\Leet Translator\bin\Debug\net8.0\Leet Translator.pdb
+C:\Users\Yakubu\source\repos\Leet Translator\Leet Translator\bin\Debug\net8.0\Azure.Core.dll
+C:\Users\Yakubu\source\repos\Leet Translator\Leet Translator\bin\Debug\net8.0\Azure.Identity.dll
+C:\Users\Yakubu\source\repos\Leet Translator\Leet Translator\bin\Debug\net8.0\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Users\Yakubu\source\repos\Leet Translator\Leet Translator\bin\Debug\net8.0\Microsoft.Data.SqlClient.dll
+C:\Users\Yakubu\source\repos\Leet Translator\Leet Translator\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.dll
+C:\Users\Yakubu\source\repos\Leet Translator\Leet Translator\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+C:\Users\Yakubu\source\repos\Leet Translator\Leet Translator\bin\Debug\net8.0\Microsoft.Identity.Client.dll
+C:\Users\Yakubu\source\repos\Leet Translator\Leet Translator\bin\Debug\net8.0\Microsoft.Identity.Client.Extensions.Msal.dll
+C:\Users\Yakubu\source\repos\Leet Translator\Leet Translator\bin\Debug\net8.0\Microsoft.IdentityModel.Abstractions.dll
+C:\Users\Yakubu\source\repos\Leet Translator\Leet Translator\bin\Debug\net8.0\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\Yakubu\source\repos\Leet Translator\Leet Translator\bin\Debug\net8.0\Microsoft.IdentityModel.Logging.dll
+C:\Users\Yakubu\source\repos\Leet Translator\Leet Translator\bin\Debug\net8.0\Microsoft.IdentityModel.Protocols.dll
+C:\Users\Yakubu\source\repos\Leet Translator\Leet Translator\bin\Debug\net8.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Users\Yakubu\source\repos\Leet Translator\Leet Translator\bin\Debug\net8.0\Microsoft.IdentityModel.Tokens.dll
+C:\Users\Yakubu\source\repos\Leet Translator\Leet Translator\bin\Debug\net8.0\Microsoft.SqlServer.Server.dll
+C:\Users\Yakubu\source\repos\Leet Translator\Leet Translator\bin\Debug\net8.0\Microsoft.Win32.SystemEvents.dll
+C:\Users\Yakubu\source\repos\Leet Translator\Leet Translator\bin\Debug\net8.0\Newtonsoft.Json.dll
+C:\Users\Yakubu\source\repos\Leet Translator\Leet Translator\bin\Debug\net8.0\Serilog.dll
+C:\Users\Yakubu\source\repos\Leet Translator\Leet Translator\bin\Debug\net8.0\Serilog.Sinks.Console.dll
+C:\Users\Yakubu\source\repos\Leet Translator\Leet Translator\bin\Debug\net8.0\Serilog.Sinks.MSSqlServer.dll
+C:\Users\Yakubu\source\repos\Leet Translator\Leet Translator\bin\Debug\net8.0\Serilog.Sinks.PeriodicBatching.dll
+C:\Users\Yakubu\source\repos\Leet Translator\Leet Translator\bin\Debug\net8.0\System.Configuration.ConfigurationManager.dll
+C:\Users\Yakubu\source\repos\Leet Translator\Leet Translator\bin\Debug\net8.0\System.Drawing.Common.dll
+C:\Users\Yakubu\source\repos\Leet Translator\Leet Translator\bin\Debug\net8.0\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\Yakubu\source\repos\Leet Translator\Leet Translator\bin\Debug\net8.0\System.Memory.Data.dll
+C:\Users\Yakubu\source\repos\Leet Translator\Leet Translator\bin\Debug\net8.0\System.Runtime.Caching.dll
+C:\Users\Yakubu\source\repos\Leet Translator\Leet Translator\bin\Debug\net8.0\System.Security.Cryptography.ProtectedData.dll
+C:\Users\Yakubu\source\repos\Leet Translator\Leet Translator\bin\Debug\net8.0\System.Security.Permissions.dll
+C:\Users\Yakubu\source\repos\Leet Translator\Leet Translator\bin\Debug\net8.0\System.Windows.Extensions.dll
+C:\Users\Yakubu\source\repos\Leet Translator\Leet Translator\bin\Debug\net8.0\runtimes\unix\lib\net6.0\Microsoft.Data.SqlClient.dll
+C:\Users\Yakubu\source\repos\Leet Translator\Leet Translator\bin\Debug\net8.0\runtimes\win\lib\net6.0\Microsoft.Data.SqlClient.dll
+C:\Users\Yakubu\source\repos\Leet Translator\Leet Translator\bin\Debug\net8.0\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\Yakubu\source\repos\Leet Translator\Leet Translator\bin\Debug\net8.0\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\Yakubu\source\repos\Leet Translator\Leet Translator\bin\Debug\net8.0\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\Yakubu\source\repos\Leet Translator\Leet Translator\bin\Debug\net8.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\Yakubu\source\repos\Leet Translator\Leet Translator\bin\Debug\net8.0\runtimes\win\lib\net6.0\Microsoft.Win32.SystemEvents.dll
+C:\Users\Yakubu\source\repos\Leet Translator\Leet Translator\bin\Debug\net8.0\runtimes\unix\lib\net6.0\System.Drawing.Common.dll
+C:\Users\Yakubu\source\repos\Leet Translator\Leet Translator\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Drawing.Common.dll
+C:\Users\Yakubu\source\repos\Leet Translator\Leet Translator\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Runtime.Caching.dll
+C:\Users\Yakubu\source\repos\Leet Translator\Leet Translator\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Security.Cryptography.ProtectedData.dll
+C:\Users\Yakubu\source\repos\Leet Translator\Leet Translator\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Windows.Extensions.dll
+C:\Users\Yakubu\source\repos\Leet Translator\Leet Translator\obj\Debug\net8.0\Leet Translator.csproj.AssemblyReference.cache
+C:\Users\Yakubu\source\repos\Leet Translator\Leet Translator\obj\Debug\net8.0\Leet Translator.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Yakubu\source\repos\Leet Translator\Leet Translator\obj\Debug\net8.0\Leet Translator.AssemblyInfoInputs.cache
+C:\Users\Yakubu\source\repos\Leet Translator\Leet Translator\obj\Debug\net8.0\Leet Translator.AssemblyInfo.cs
+C:\Users\Yakubu\source\repos\Leet Translator\Leet Translator\obj\Debug\net8.0\Leet Translator.csproj.CoreCompileInputs.cache
+C:\Users\Yakubu\source\repos\Leet Translator\Leet Translator\obj\Debug\net8.0\Leet Translator.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\Yakubu\source\repos\Leet Translator\Leet Translator\obj\Debug\net8.0\Leet Translator.RazorAssemblyInfo.cache
+C:\Users\Yakubu\source\repos\Leet Translator\Leet Translator\obj\Debug\net8.0\Leet Translator.RazorAssemblyInfo.cs
+C:\Users\Yakubu\source\repos\Leet Translator\Leet Translator\obj\Debug\net8.0\Leet Translator.sourcelink.json
+C:\Users\Yakubu\source\repos\Leet Translator\Leet Translator\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\Yakubu\source\repos\Leet Translator\Leet Translator\obj\Debug\net8.0\staticwebassets.development.json
+C:\Users\Yakubu\source\repos\Leet Translator\Leet Translator\obj\Debug\net8.0\staticwebassets\msbuild.Leet Translator.Microsoft.AspNetCore.StaticWebAssets.props
+C:\Users\Yakubu\source\repos\Leet Translator\Leet Translator\obj\Debug\net8.0\staticwebassets\msbuild.build.Leet Translator.props
+C:\Users\Yakubu\source\repos\Leet Translator\Leet Translator\obj\Debug\net8.0\staticwebassets\msbuild.buildMultiTargeting.Leet Translator.props
+C:\Users\Yakubu\source\repos\Leet Translator\Leet Translator\obj\Debug\net8.0\staticwebassets\msbuild.buildTransitive.Leet Translator.props
+C:\Users\Yakubu\source\repos\Leet Translator\Leet Translator\obj\Debug\net8.0\staticwebassets.pack.json
+C:\Users\Yakubu\source\repos\Leet Translator\Leet Translator\obj\Debug\net8.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
+C:\Users\Yakubu\source\repos\Leet Translator\Leet Translator\obj\Debug\net8.0\scopedcss\bundle\Leet Translator.styles.css
+C:\Users\Yakubu\source\repos\Leet Translator\Leet Translator\obj\Debug\net8.0\scopedcss\projectbundle\Leet Translator.bundle.scp.css
+C:\Users\Yakubu\source\repos\Leet Translator\Leet Translator\obj\Debug\net8.0\Leet Tra.932E48F1.Up2Date
+C:\Users\Yakubu\source\repos\Leet Translator\Leet Translator\obj\Debug\net8.0\Leet Translator.dll
+C:\Users\Yakubu\source\repos\Leet Translator\Leet Translator\obj\Debug\net8.0\refint\Leet Translator.dll
+C:\Users\Yakubu\source\repos\Leet Translator\Leet Translator\obj\Debug\net8.0\Leet Translator.pdb
+C:\Users\Yakubu\source\repos\Leet Translator\Leet Translator\obj\Debug\net8.0\Leet Translator.genruntimeconfig.cache
+C:\Users\Yakubu\source\repos\Leet Translator\Leet Translator\obj\Debug\net8.0\ref\Leet Translator.dll

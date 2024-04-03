@@ -25,6 +25,10 @@ namespace Leet_Translator.Controllers
             {
                 string translatedText = await _translationService.TranslateToLeetSpeak(request.InputText);
 
+                //Log API call and result
+                Log.Information("API call: TranslateToLeetSpeak, InputText: {InputText}, TranslatedText: {TranslatedText}, Timestamp: {Timestamp}",
+                    request.InputText, translatedText, DateTime.UtcNow);
+
                 return Json(new { translatedText });
             }
             catch (Exception ex)

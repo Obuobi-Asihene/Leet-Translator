@@ -1,6 +1,7 @@
 ﻿using Leet_Translator.Data;
 using Leet_Translator.Models;
 using Leet_Translator.Services.Interfaces;
+using Serilog;
 
 namespace Leet_Translator.Services
 {
@@ -17,25 +18,48 @@ namespace Leet_Translator.Services
 
         public IEnumerable<TranslationRecord> GetTranslationRecords()
         {
-            return _dbContext.TranslationRecords.ToList();
+            try
+            {
+                Log.Information("Retrieving translation records from the database.");
+                return _dbContext.TranslationRecords.ToList();
+            }
+            catch (Exception ex)
+            {
+                Log.Error(ex, "An error occurred while retrieving translation records from the database.");
+                throw;
+            }
         }
 
         public async Task<string> TranslateToLeetSpeak(string inputText)
         {
-            string translatedText = await _funTranslationService.TranslateToLeetSpeak(inputText);
-
-            //logging API call & result to DB
-            var translationRecord = new TranslationRecord
+            try
             {
-                InputText = inputText,
-                TranslatedText = translatedText,
-                TimeStamp = DateTime.UtcNow
-            };
+                Log.Information("Initiating translation to leetspeak for input text: {InputText}", inputText);
 
-            _dbContext.TranslationRecords.Add(translationRecord);
-            await _dbContext.SaveChangesAsync();
+                string translatedText = await _funTranslationService.TranslateToLeetSpeak(inputText);
 
-            return translatedText;
+                Log.Information("Translation to leetspeak successful. Translated text: {TranslatedText}", translatedText);
+
+                // Log database operation
+                Log.Information("Adding translation record to the database.");
+
+                var translationRecord = new TranslationRecord
+                {
+                    InputText = inputText,
+                    TranslatedText = translatedText,
+                    TimeStamp = DateTime.UtcNow
+                };
+
+                _dbContext.TranslationRecords.Add(translationRecord);
+                await _dbContext.SaveChangesAsync();
+
+                return translatedText;
+            }
+            catch (Exception ex)
+            {
+                Log.Error(ex, "An error occurred while translating to leetspeak or saving translation record to the database.");
+                throw;
+            }
         }
     }
 }

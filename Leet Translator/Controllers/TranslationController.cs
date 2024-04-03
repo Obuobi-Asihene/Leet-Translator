@@ -2,13 +2,14 @@
 using Leet_Translator.Services;
 using Leet_Translator.Services.Interfaces;
 using Microsoft.AspNetCore.Mvc;
+using Serilog;
 
 namespace Leet_Translator.Controllers
 {
     public class TranslationController : Controller
     {
         private readonly ITranslationService _translationService;
-        public TranslationController(TranslationService translationService)
+        public TranslationController(ITranslationService translationService)
         {
             _translationService = translationService;
         }
@@ -20,17 +21,35 @@ namespace Leet_Translator.Controllers
         [HttpPost]
         public async Task<JsonResult> Translate(TranslationRequest request)
         {
-            string translatedText = await _translationService.TranslateToLeetSpeak(request.InputText);
-            
-            return Json(new { translatedText });
+            try
+            {
+                string translatedText = await _translationService.TranslateToLeetSpeak(request.InputText);
+
+                return Json(new { translatedText });
+            }
+            catch (Exception ex)
+            {
+                Log.Error(ex, "An error occurred while translating text.");
+
+                return Json(new { ex.Message });
+            }
         }
 
         [HttpGet]
         public ActionResult GetTranslationRecords()
         {
-            var records = _translationService.GetTranslationRecords();
+            try
+            {
+                var records = _translationService.GetTranslationRecords();
 
-            return Json(records);
+                return Json(records);
+            }
+            catch (Exception ex)
+            {
+                Log.Error(ex, "An error occurred while retrieving translation records.");
+
+                return StatusCode(500, "An error occured while retrieving translation records.");
+            }
         }
     }
 }

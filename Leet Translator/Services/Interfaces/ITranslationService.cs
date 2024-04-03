@@ -1,4 +1,5 @@
 ﻿using Leet_Translator.Models;
+using Microsoft.EntityFrameworkCore;
 
 namespace Leet_Translator.Services.Interfaces
 {
@@ -6,5 +7,7 @@ namespace Leet_Translator.Services.Interfaces
     {
         Task<string> TranslateToLeetSpeak(string inputText);
         IEnumerable<TranslationRecord> GetTranslationRecords();
+
+        IEnumerable<TranslationRecord> SearchRecords(string searchTerm);
     }
 }

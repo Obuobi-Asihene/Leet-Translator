@@ -30,6 +30,13 @@ namespace Leet_Translator.Services
             }
         }
 
+        public IEnumerable<TranslationRecord> SearchRecords(string searchTerm)
+        {
+            return _dbContext.TranslationRecords
+                .Where(record => record.InputText.Contains(searchTerm) || record.TranslatedText.Contains(searchTerm))
+                .ToList();
+        }
+
         public async Task<string> TranslateToLeetSpeak(string inputText)
         {
             try

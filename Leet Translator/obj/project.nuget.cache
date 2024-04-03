@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "IXWv+GvqXxTcQIQul46QF83GRS0PAOPb9fMkk7yWmsNC/G1o7nWjdoCPWHsvPE+yQcjW/C6O+weO86JZleFx3A==",
+  "dgSpecHash": "i6DUzhK+Xc43gb0gnBH2ZgjSDLpSOw19K+oEleJihYzu2iWeAqdFyF+GZIAKiS1MwkWq1eWEnlix1zP7taRWtA==",
   "success": true,
   "projectFilePath": "C:\\Users\\Yakubu\\source\\repos\\Leet Translator\\Leet Translator\\Leet Translator.csproj",
   "expectedPackageFiles": [
@@ -14,7 +14,9 @@
     "C:\\Users\\Yakubu\\.nuget\\packages\\microsoft.extensions.logging\\8.0.0\\microsoft.extensions.logging.8.0.0.nupkg.sha512",
     "C:\\Users\\Yakubu\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\8.0.0\\microsoft.extensions.logging.abstractions.8.0.0.nupkg.sha512",
     "C:\\Users\\Yakubu\\.nuget\\packages\\microsoft.extensions.options\\8.0.0\\microsoft.extensions.options.8.0.0.nupkg.sha512",
-    "C:\\Users\\Yakubu\\.nuget\\packages\\microsoft.extensions.primitives\\8.0.0\\microsoft.extensions.primitives.8.0.0.nupkg.sha512"
+    "C:\\Users\\Yakubu\\.nuget\\packages\\microsoft.extensions.primitives\\8.0.0\\microsoft.extensions.primitives.8.0.0.nupkg.sha512",
+    "C:\\Users\\Yakubu\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512",
+    "C:\\Users\\Yakubu\\.nuget\\packages\\serilog\\3.1.1\\serilog.3.1.1.nupkg.sha512"
   ],
   "logs": []
 }

@@ -1,8 +1,8 @@
 {
   "Files": [
     {
-      "Id": "C:\\Users\\Yakubu\\source\\repos\\Leet Translator\\Leet Translator\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\Leet Translator.bundle.scp.css",
-      "PackagePath": "staticwebassets\\Leet Translator.bundle.scp.css"
+      "Id": "C:\\Users\\Yakubu\\source\\repos\\Leet Translator\\Leet Translator\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\LeetTranslator.bundle.scp.css",
+      "PackagePath": "staticwebassets\\LeetTranslator.bundle.scp.css"
     },
     {
       "Id": "C:\\Users\\Yakubu\\source\\repos\\Leet Translator\\Leet Translator\\wwwroot\\css\\site.css",
@@ -245,20 +245,20 @@
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
     },
     {
-      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.Leet Translator.Microsoft.AspNetCore.StaticWebAssets.props",
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.LeetTranslator.Microsoft.AspNetCore.StaticWebAssets.props",
       "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
     },
     {
-      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.build.Leet Translator.props",
-      "PackagePath": "build\\Leet Translator.props"
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.build.LeetTranslator.props",
+      "PackagePath": "build\\LeetTranslator.props"
     },
     {
-      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildMultiTargeting.Leet Translator.props",
-      "PackagePath": "buildMultiTargeting\\Leet Translator.props"
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildMultiTargeting.LeetTranslator.props",
+      "PackagePath": "buildMultiTargeting\\LeetTranslator.props"
     },
     {
-      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildTransitive.Leet Translator.props",
-      "PackagePath": "buildTransitive\\Leet Translator.props"
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildTransitive.LeetTranslator.props",
+      "PackagePath": "buildTransitive\\LeetTranslator.props"
     }
   ],
   "ElementsToRemove": []

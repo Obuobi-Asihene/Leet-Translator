@@ -1,5 +1,7 @@
+using Leet_Translator.Data;
 using Leet_Translator.Services;
 using Leet_Translator.Services.Interfaces;
+using Microsoft.EntityFrameworkCore;
 using Serilog;
 using Serilog.Events;
 using Serilog.Sinks.MSSqlServer;
@@ -9,13 +11,17 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 
-//register services and interfaces
+// Register DbContext
+builder.Services.AddDbContext<LeetTranslatorDbContext>(options =>
+    options.UseSqlServer("name=ConnectionStrings:DefaultConnection"));
+
+// Register services and interfaces
 builder.Services.AddScoped<IFunTranslationService, FunTranslationService>();
 builder.Services.AddScoped<ITranslationService, TranslationService>();
 
 var app = builder.Build();
 
-//configure serilog for logging
+// Configure serilog for logging
 Log.Logger = new LoggerConfiguration()
     .MinimumLevel.Information()
     .MinimumLevel.Override("Microsoft", LogEventLevel.Warning)

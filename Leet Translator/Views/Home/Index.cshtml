@@ -5,7 +5,7 @@
 <form method="post" action="@Url.Action("Translate", "Translation")" id="translationForm">
     <div class="form-group">
         <label for="inputText">Enter text:</label>
-        <textarea class="form-control" id="inputText" name="inputText" value="@Model"></textarea>
+        <textarea class="form-control" id="inputText" name="inputText">@Model</textarea>
     </div>
 
     <button type="submit" class="btn btn-primary">Translate</button>
@@ -30,7 +30,7 @@
                     type: 'POST',
                     data: { inputText: inputText },
                     success: function (result) {
-                        $('#translatedText').text(result.translatedText);
+                        $('#translationResult').html('<h3>Translated Text:</h3><p>' + result.translatedText + '</p>');
                     },
                     error: function (xhr, status, error) {
                         console.error(xhr.responseText);

@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("LeetTranslator")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c97975333afb9eada0f3fedcd246c0379f3ec4e6")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+cea3075260f7d7db929b9d05ded32c7f15b0b1a6")]
 [assembly: System.Reflection.AssemblyProductAttribute("LeetTranslator")]
 [assembly: System.Reflection.AssemblyTitleAttribute("LeetTranslator")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

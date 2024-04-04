@@ -39,13 +39,13 @@ namespace Leet_Translator.Controllers
         }
 
         [HttpGet]
-        public ActionResult GetTranslationRecords()
+        public async Task<IActionResult> GetTranslationRecords()
         {
             try
             {
-                var records = _translationService.GetTranslationRecords();
+                var records = await _translationService.GetTranslationRecords();
 
-                return Json(records);
+                return View("TranslationRecords", records);
             }
             catch (Exception ex)
             {

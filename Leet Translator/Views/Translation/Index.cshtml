@@ -8,6 +8,8 @@
         <textarea class="form-control" id="inputText" name="inputText">@Model</textarea>
     </div>
 
+    <br/>
+
     <button type="submit" class="btn btn-primary">Translate</button>
 </form>
 
@@ -25,11 +27,14 @@
             $('#translationForm').submit(function (e) {
                 e.preventDefault();
                 var inputText = $('#inputText').val();
+
+                // Make Ajax call to translate text
                 $.ajax({
                     url: '@Url.Action("Translate", "Translation")',
                     type: 'POST',
                     data: { inputText: inputText },
                     success: function (result) {
+                        // Update UI with translated text
                         $('#translationResult').html('<h3>Translated Text:</h3><p>' + result.translatedText + '</p>');
                     },
                     error: function (xhr, status, error) {

@@ -4,7 +4,6 @@ using Leet_Translator.Services.Interfaces;
 using Microsoft.EntityFrameworkCore;
 using Serilog;
 using Serilog.Events;
-using Serilog.Sinks.MSSqlServer;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -28,13 +27,7 @@ Log.Logger = new LoggerConfiguration()
     .MinimumLevel.Override("Microsoft", LogEventLevel.Warning)
     .Enrich.FromLogContext()
     .WriteTo.Console()
-    .WriteTo.MSSqlServer(
-        connectionString: builder.Configuration.GetConnectionString("DefaultConnection"),
-        sinkOptions: new MSSqlServerSinkOptions
-        {
-            TableName = "LogRecords",
-            AutoCreateSqlTable = true
-        })
+    .WriteTo.File("log.txt")
     .CreateLogger();
 
 // Configure the HTTP request pipeline.
@@ -54,6 +47,6 @@ app.UseAuthorization();
 
 app.MapControllerRoute(
     name: "default",
-    pattern: "{controller=Home}/{action=Index}/{id?}");
+    pattern: "{controller=Translation}/{action=Index}/{id?}");
 
 app.Run();

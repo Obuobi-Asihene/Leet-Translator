@@ -1,0 +1,88 @@
+2024-04-04 14:12:33.523 +00:00 [INF] Initiating translation to leetspeak for input text: become what you fear
+2024-04-04 14:12:33.562 +00:00 [INF] Translation request initiated for input text: become what you fear
+2024-04-04 14:12:36.492 +00:00 [INF] Translation successful. Translated text: bEc0m3 Wh@T j00 ph3aR
+2024-04-04 14:12:36.494 +00:00 [INF] Translation to leetspeak successful. Translated text: bEc0m3 Wh@T j00 ph3aR
+2024-04-04 14:12:36.498 +00:00 [INF] Adding translation record to the database.
+2024-04-04 14:12:37.763 +00:00 [INF] API call: TranslateToLeetSpeak, InputText: become what you fear, TranslatedText: bEc0m3 Wh@T j00 ph3aR, Timestamp: "2024-04-04T14:12:37.7633790Z"
+2024-04-04 14:13:42.042 +00:00 [INF] Retrieving translation records from the database.
+2024-04-04 14:15:03.818 +00:00 [INF] Retrieving translation records from the database.
+2024-04-04 14:16:23.256 +00:00 [INF] Initiating translation to leetspeak for input text: merry christmas
+2024-04-04 14:16:23.306 +00:00 [INF] Translation request initiated for input text: merry christmas
+2024-04-04 14:16:24.962 +00:00 [INF] Translation successful. Translated text: mERRy chriz7ma5
+2024-04-04 14:16:24.963 +00:00 [INF] Translation to leetspeak successful. Translated text: mERRy chriz7ma5
+2024-04-04 14:16:24.966 +00:00 [INF] Adding translation record to the database.
+2024-04-04 14:16:26.033 +00:00 [INF] API call: TranslateToLeetSpeak, InputText: merry christmas, TranslatedText: mERRy chriz7ma5, Timestamp: "2024-04-04T14:16:26.0327035Z"
+2024-04-04 14:16:52.228 +00:00 [INF] Initiating translation to leetspeak for input text: null
+2024-04-04 14:16:52.266 +00:00 [INF] Translation request initiated for input text: null
+2024-04-04 14:16:53.805 +00:00 [INF] Translation successful. Translated text: 
+2024-04-04 14:16:53.807 +00:00 [INF] Translation to leetspeak successful. Translated text: 
+2024-04-04 14:16:53.809 +00:00 [INF] Adding translation record to the database.
+2024-04-04 14:16:55.044 +00:00 [ERR] An error occurred while translating to leetspeak or saving translation record to the database.
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): Cannot insert the value NULL into column 'InputText', table 'TranslationRecord_DB.dbo.TranslationRecords'; column does not allow nulls. INSERT fails.
+   at Microsoft.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryHasMoreRows(Boolean& moreRows)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryReadInternal(Boolean setTimeout, Boolean& more)
+   at Microsoft.Data.SqlClient.SqlDataReader.ReadAsyncExecute(Task task, Object state)
+   at Microsoft.Data.SqlClient.SqlDataReader.InvokeAsyncCall[T](SqlDataReaderBaseAsyncCallContext`1 context)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeResultSetAsync(Int32 startCommandIndex, RelationalDataReader reader, CancellationToken cancellationToken)
+ClientConnectionId:ae86a925-e5d2-4dbe-a33b-e7f2144d501e
+Error Number:515,State:2,Class:16
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeResultSetAsync(Int32 startCommandIndex, RelationalDataReader reader, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeAsync(RelationalDataReader reader, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Update.Internal.SqlServerModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Leet_Translator.Services.TranslationService.TranslateToLeetSpeak(String inputText) in C:\Users\Yakubu\source\repos\Leet Translator\Leet Translator\Services\TranslationService.cs:line 63
+2024-04-04 14:16:55.140 +00:00 [ERR] An error occurred while translating text.
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): Cannot insert the value NULL into column 'InputText', table 'TranslationRecord_DB.dbo.TranslationRecords'; column does not allow nulls. INSERT fails.
+   at Microsoft.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryHasMoreRows(Boolean& moreRows)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryReadInternal(Boolean setTimeout, Boolean& more)
+   at Microsoft.Data.SqlClient.SqlDataReader.ReadAsyncExecute(Task task, Object state)
+   at Microsoft.Data.SqlClient.SqlDataReader.InvokeAsyncCall[T](SqlDataReaderBaseAsyncCallContext`1 context)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeResultSetAsync(Int32 startCommandIndex, RelationalDataReader reader, CancellationToken cancellationToken)
+ClientConnectionId:ae86a925-e5d2-4dbe-a33b-e7f2144d501e
+Error Number:515,State:2,Class:16
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeResultSetAsync(Int32 startCommandIndex, RelationalDataReader reader, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeAsync(RelationalDataReader reader, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Update.Internal.SqlServerModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Leet_Translator.Services.TranslationService.TranslateToLeetSpeak(String inputText) in C:\Users\Yakubu\source\repos\Leet Translator\Leet Translator\Services\TranslationService.cs:line 63
+   at Leet_Translator.Controllers.TranslationController.Translate(TranslationRequest request) in C:\Users\Yakubu\source\repos\Leet Translator\Leet Translator\Controllers\TranslationController.cs:line 25
+2024-04-04 14:58:17.592 +00:00 [INF] Retrieving translation records from the database.
+2024-04-04 14:58:27.544 +00:00 [INF] Initiating translation to leetspeak for input text: hello
+2024-04-04 14:58:27.570 +00:00 [INF] Translation request initiated for input text: hello
+2024-04-04 14:58:29.634 +00:00 [INF] Translation successful. Translated text: hE110
+2024-04-04 14:58:29.636 +00:00 [INF] Translation to leetspeak successful. Translated text: hE110
+2024-04-04 14:58:29.638 +00:00 [INF] Adding translation record to the database.
+2024-04-04 14:58:29.978 +00:00 [INF] API call: TranslateToLeetSpeak, InputText: hello, TranslatedText: hE110, Timestamp: "2024-04-04T14:58:29.9774431Z"
+2024-04-04 14:58:31.583 +00:00 [INF] Retrieving translation records from the database.

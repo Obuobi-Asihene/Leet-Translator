@@ -1,6 +1,7 @@
 ﻿using Leet_Translator.Data;
 using Leet_Translator.Models;
 using Leet_Translator.Services.Interfaces;
+using Microsoft.EntityFrameworkCore;
 using Serilog;
 
 namespace Leet_Translator.Services
@@ -16,12 +17,13 @@ namespace Leet_Translator.Services
             _dbContext = dbContext;
         }
 
-        public IEnumerable<TranslationRecord> GetTranslationRecords()
+        public async Task<IEnumerable<TranslationRecord>> GetTranslationRecords()
         {
+
             try
             {
                 Log.Information("Retrieving translation records from the database.");
-                return _dbContext.TranslationRecords.ToList();
+                return await _dbContext.TranslationRecords.ToListAsync();
             }
             catch (Exception ex)
             {

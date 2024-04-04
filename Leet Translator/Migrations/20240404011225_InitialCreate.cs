@@ -12,6 +12,23 @@ namespace Leet_Translator.Migrations
         protected override void Up(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.CreateTable(
+                name: "LogRecords",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    Message = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Level = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Timestamp = table.Column<DateTime>(type: "datetime2", nullable: false),
+                    InputText = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    TranslatedText = table.Column<string>(type: "nvarchar(max)", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_LogRecords", x => x.Id);
+                });
+
+            migrationBuilder.CreateTable(
                 name: "TranslationRecords",
                 columns: table => new
                 {
@@ -30,6 +47,9 @@ namespace Leet_Translator.Migrations
         /// <inheritdoc />
         protected override void Down(MigrationBuilder migrationBuilder)
         {
+            migrationBuilder.DropTable(
+                name: "LogRecords");
+
             migrationBuilder.DropTable(
                 name: "TranslationRecords");
         }

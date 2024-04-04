@@ -21,7 +21,7 @@ namespace Leet_Translator.Services
             {
                 Log.Information("Translation request initiated for input text: {InputText}", inputText);
 
-                string endpoint = $"{BaseUrl}leet.json";
+                string endpoint = $"{BaseUrl}leetspeak.json";
                 var requestBody = new FormUrlEncodedContent(new[]
                 {
                     new KeyValuePair<string, string>("text", inputText)

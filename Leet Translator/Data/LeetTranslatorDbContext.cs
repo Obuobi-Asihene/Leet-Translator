@@ -10,6 +10,7 @@ namespace Leet_Translator.Data
         }
 
         public DbSet<TranslationRecord> TranslationRecords { get; set; }
+        public DbSet<LogRecord> LogRecords { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

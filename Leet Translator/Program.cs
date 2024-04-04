@@ -13,11 +13,12 @@ builder.Services.AddControllersWithViews();
 
 // Register DbContext
 builder.Services.AddDbContext<LeetTranslatorDbContext>(options =>
-    options.UseSqlServer("name=ConnectionStrings:DefaultConnection"));
+    options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 
 // Register services and interfaces
 builder.Services.AddScoped<IFunTranslationService, FunTranslationService>();
 builder.Services.AddScoped<ITranslationService, TranslationService>();
+builder.Services.AddSingleton<HttpClient>();
 
 var app = builder.Build();
 
@@ -28,10 +29,10 @@ Log.Logger = new LoggerConfiguration()
     .Enrich.FromLogContext()
     .WriteTo.Console()
     .WriteTo.MSSqlServer(
-        connectionString: builder.Configuration.GetConnectionString("LoggingDefaultConnection"),
+        connectionString: builder.Configuration.GetConnectionString("DefaultConnection"),
         sinkOptions: new MSSqlServerSinkOptions
         {
-            TableName = "Apilogs",
+            TableName = "LogRecords",
             AutoCreateSqlTable = true
         })
     .CreateLogger();

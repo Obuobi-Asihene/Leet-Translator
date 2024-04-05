@@ -1,6 +1,8 @@
-﻿using Leet_Translator.Models;
+﻿using Leet_Translator.Areas.Identity.Data;
+using Leet_Translator.Models;
 using Leet_Translator.Services.Interfaces;
 using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Serilog;
 
@@ -10,9 +12,11 @@ namespace Leet_Translator.Controllers
     public class TranslationController : Controller
     {
         private readonly ITranslationService _translationService;
-        public TranslationController(ITranslationService translationService)
+        private readonly UserManager<AppUser> _userManager;
+        public TranslationController(ITranslationService translationService, UserManager<AppUser> userManager)
         {
             _translationService = translationService;
+            _userManager = userManager;
         }
         public IActionResult Index()
         {
@@ -24,7 +28,13 @@ namespace Leet_Translator.Controllers
         {
             try
             {
-                string translatedText = await _translationService.TranslateToLeetSpeak(request.InputText);
+                var currentUser = await _userManager.GetUserAsync(User);
+                if (currentUser == null)
+                {
+                    return Json(new { error = "User not found" });
+                }
+
+                string translatedText = await _translationService.TranslateToLeetSpeak(request.InputText, currentUser.Id);
 
                 //Log API call and result
                 Log.Information("API call: TranslateToLeetSpeak, InputText: {InputText}, TranslatedText: {TranslatedText}, Timestamp: {Timestamp}",
@@ -45,7 +55,13 @@ namespace Leet_Translator.Controllers
         {
             try
             {
-                var records = await _translationService.GetTranslationRecords();
+                var currentUser = await _userManager.GetUserAsync(User);
+                if (currentUser == null)
+                {
+                    return NotFound();
+                }
+
+                var records = await _translationService.GetTranslationRecords(currentUser.Id);
 
                 return View("TranslationRecords", records);
             }

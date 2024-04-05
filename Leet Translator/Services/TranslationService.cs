@@ -17,13 +17,13 @@ namespace Leet_Translator.Services
             _dbContext = dbContext;
         }
 
-        public async Task<IEnumerable<TranslationRecord>> GetTranslationRecords()
+        public async Task<IEnumerable<TranslationRecord>> GetTranslationRecords(string userId)
         {
 
             try
             {
                 Log.Information("Retrieving translation records from the database.");
-                return await _dbContext.TranslationRecords.ToListAsync();
+                return await _dbContext.TranslationRecords.Where(record => record.UserId == userId).ToListAsync();
             }
             catch (Exception ex)
             {
@@ -39,7 +39,7 @@ namespace Leet_Translator.Services
                 .ToList();
         }
 
-        public async Task<string> TranslateToLeetSpeak(string inputText)
+        public async Task<string> TranslateToLeetSpeak(string inputText, string userId)
         {
             try
             {
@@ -56,7 +56,8 @@ namespace Leet_Translator.Services
                 {
                     InputText = inputText,
                     TranslatedText = translatedText,
-                    TimeStamp = DateTime.UtcNow
+                    TimeStamp = DateTime.UtcNow,
+                    UserId = userId
                 };
 
                 _dbContext.TranslationRecords.Add(translationRecord);

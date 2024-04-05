@@ -32,11 +32,14 @@ namespace Leet_Translator.Services
             }
         }
 
-        public IEnumerable<TranslationRecord> SearchRecords(string searchTerm)
+        public IEnumerable<TranslationRecord> SearchRecords(string searchTerm, string userId)
         {
             return _dbContext.TranslationRecords
-                .Where(record => record.InputText.Contains(searchTerm) || record.TranslatedText.Contains(searchTerm))
-                .ToList();
+            .Where(record =>
+                        (string.IsNullOrEmpty(searchTerm) || record.InputText.Contains(searchTerm) || record.TranslatedText.Contains(searchTerm)) &&
+                        (string.IsNullOrEmpty(userId) || record.UserId == userId)
+                    )
+            .ToList();
         }
 
         public async Task<string> TranslateToLeetSpeak(string inputText, string userId)

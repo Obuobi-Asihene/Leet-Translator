@@ -8,6 +8,6 @@ namespace Leet_Translator.Services.Interfaces
         Task<string> TranslateToLeetSpeak(string inputText, string userId);
         Task<IEnumerable<TranslationRecord>> GetTranslationRecords(string userId);
 
-        IEnumerable<TranslationRecord> SearchRecords(string searchTerm);
+        IEnumerable<TranslationRecord> SearchRecords(string searchTerm, string userId);
     }
 }

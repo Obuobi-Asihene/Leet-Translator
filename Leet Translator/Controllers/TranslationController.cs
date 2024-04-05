@@ -72,5 +72,24 @@ namespace Leet_Translator.Controllers
                 return StatusCode(500, "An error occured while retrieving translation records.");
             }
         }
+
+        [HttpGet]
+        public async Task<IActionResult> Search(string searchTerm)
+        {
+            var currentUser = await _userManager.GetUserAsync(User);
+            if (currentUser == null)
+            {
+                return NotFound();
+            }
+
+            if (string.IsNullOrEmpty(searchTerm))
+            {
+                // If search term is empty, return all records
+                return RedirectToAction(nameof(Index));
+            }
+
+            var records = _translationService.SearchRecords(searchTerm, currentUser.Id);
+            return View("TranslationRecords", records);
+        }
     }
 }

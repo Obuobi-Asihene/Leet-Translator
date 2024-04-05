@@ -6,6 +6,7 @@ using Serilog;
 
 namespace Leet_Translator.Controllers
 {
+    [Authorize]
     public class TranslationController : Controller
     {
         private readonly ITranslationService _translationService;
